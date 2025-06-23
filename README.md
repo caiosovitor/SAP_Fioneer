@@ -1,1 +1,66 @@
-# SAP_Fioneer
+# Automated Tests for SAP Fioneer Website
+
+This project contains automated tests developed to fulfill the requirements of the QA Automation Challenge provided by the SAP Fioneer ESG Team.
+
+---
+
+## Test Cases Overview
+
+- **Test 1**  
+  Navigate to the page _SAP Fioneer | World-class software solutions for financial services_ and verify the presence and correctness of the **Key Facts** section.
+
+- **Test 2**  
+  On the same page, under the **Finance & ESG** menu, click on **ESG KPI Engine**.  
+  Verify that the user is redirected to the correct page:  
+  _Stay audit-ready with the ESG KPI Engine | SAP Fioneer_  
+  (This page contains relevant information about the project).
+
+- **Test 3**  
+  From the same main page, click on the **Get in touch** button.  
+  Confirm that the user is redirected to the correct page:  
+  _SAP Fioneer | Contact | Get in touch!_  
+  In the contact form, enter an invalid email (e.g., `342323`) in the **Work email** field and verify that the correct validation message is displayed.
+
+---
+
+## Framework & Technologies
+
+This test suite was developed using the following tools and methodologies:
+
+- **Cypress** – for end-to-end test automation  
+- **TypeScript** – language used to implement the tests  
+- **BDD (Behavior Driven Development)** – to structure tests in a way that is understandable for both technical and non-technical stakeholders  
+- **Page Object Pattern** – to separate page structure from test logic, improving code reuse and readability
+
+---
+
+## Project Structure and Files
+
+- **`features/`**  
+  Contains BDD feature files written in Gherkin syntax, describing test scenarios in a readable and collaborative way.
+
+- **`step_definitions/`**  
+  Maps each step of the feature files to Cypress commands and functions.
+
+- **`pageObjects/`** (or **`locators/`**)  
+  Centralizes element selectors to ensure maintainability and reuse across tests.
+
+- **`fixtures/`**  
+  Holds static data and mock responses used during test execution.
+
+- **`support/`**  
+  Includes custom commands, configuration, and setup scripts such as global hooks.
+
+- **`intercept/`**  
+  Contains Cypress network intercepts used to monitor or mock API requests, ensuring test stability and reducing flakiness.
+
+---
+
+## Running the Tests
+
+- **Install dependencies**  
+    npm install
+ - **Run via browser mode -> * Opens Cypress Test Runner UI where you can select the browser and run the desired tests interactively**  
+    npx cypress open
+ - **Run via headless mode -> Runs tests in the terminal without opening a browser; results and logs are shown in the console**  
+    npx cypress run
