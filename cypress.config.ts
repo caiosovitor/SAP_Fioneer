@@ -6,10 +6,10 @@ import createBundler from '@bahmutov/cypress-esbuild-preprocessor';
 export default defineConfig({
   e2e: {
     async setupNodeEvents(on, config) {
-      // Configura o plugin Cucumber
+      // Configures the Cucumber plugin – Cucumber is the tool used to link feature files with the project’s implementation code
       await addCucumberPreprocessorPlugin(on, config);
 
-      // Configura o preprocessor para TypeScript com esbuild
+      // Configures the preprocessor for TypeScript with esbuild
       on(
         'file:preprocessor',
         createBundler({
@@ -20,11 +20,11 @@ export default defineConfig({
       return config;
     },
 
-    // Padrão para arquivos .feature (BDD)
+    // Pattern for .feature files (BDD)
     specPattern: '**/*.feature',
 
-    // Se quiser, pode configurar baseUrl e suporte aqui:
-    // baseUrl: 'https://www.sapfioneer.com',
+    // Base URL, described here below!:
+    baseUrl: 'https://www.sapfioneer.com/',
     // supportFile: 'cypress/support/e2e.ts',
   },
 });
