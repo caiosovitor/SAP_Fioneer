@@ -1,0 +1,26 @@
+{
+  "name": "sap_fioneer",
+  "version": "1.0.0",
+  "description": "This project contains automated tests developed to fulfill the requirements of the QA Automation Challenge provided by the SAP Fioneer ESG Team.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiosovitor/SAP_Fioneer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiosovitor/SAP_Fioneer/issues"
+  },
+  "homepage": "https://github.com/caiosovitor/SAP_Fioneer#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.1.0",
+    "@cucumber/gherkin": "^32.1.2",
+    "@cucumber/messages": "^27.2.0",
+    "cypress": "^14.5.0"
+  }
+}
