@@ -51,14 +51,14 @@ This test suite was developed using the following tools and methodologies:
 - **`step_definitions/`**  
   Maps each step of the feature files to Cypress commands and functions.
 
-- **`pageObjects/`** (or **`locators/`**)  
+- **`actions/`**  
+  Contains the logics and code implemented.
+
+- **`locators/`**  
   Centralizes element selectors to ensure maintainability and reuse across tests.
 
 - **`fixtures/`**  
   Holds static data and mock responses used during test execution.
-
-- **`support/`**  
-  Includes custom commands, configuration, and setup scripts such as global hooks.
 
 ---
 
