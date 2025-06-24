@@ -10,7 +10,7 @@ Feature: Navigation and Contact Form Functionality
     - Test Case 3 (TC3):
         - Verify the frontend behavior when submitting an invalid email in the contact form.
         - Note: The main page contains two "Get in touch" buttons. This test uses the first button closer "Watch demos" button.
-        - Note: The second scenario TCB of this Test Case is expected to fail due to an incorrect URL provided after clicking "Get in touch".
+        - Note: The second scenario TC3B of this Test Case is expected to fail due to an incorrect URL provided after clicking "Get in touch".
 
 
     #Background is used when a step is used by all the test scenarios.
