@@ -3,3 +3,10 @@
 
 # Node.js
 node_modules/
+
+# Reports & Screenshots
+cypress/reports/
+cypress/screenshots/
+
+
+
