@@ -23,6 +23,15 @@ This project contains automated tests developed to fulfill the requirements of t
 
 ---
 
+**About BDD (Behavior Driven Development)**
+This project uses BDD (Behavior Driven Development) to write tests in simple Gherkin language, so both technical folks and non-technical team members can easily understand them. It helps everyone work together and makes sure the tests really cover what the business needs.
+
+
+**Test Reporting**
+We use Mochawesome to create detailed test reports in JSON and HTML formats. These reports show all the test results, include screenshots when something fails, and have charts to help you quickly understand what’s going on. They’re made after running tests in headless mode and you can open the HTML report right in any browser.
+
+---
+
 ## Framework & Technologies
 
 This test suite was developed using the following tools and methodologies:
@@ -55,7 +64,11 @@ This test suite was developed using the following tools and methodologies:
 
 ## Running the Tests
 
-- **Install dependencies**  
+  - **Base URL**  
+    The tests are configured to run against the base URL:  `https://www.sapfioneer.com/`  
+    This is set in the Cypress config, so all test URLs are relative to this address.
+
+ - **Install dependencies**  
     npm install
 
  - **Run via browser mode -> * Opens Cypress Test Runner UI where you can select the browser and run the desired tests interactively**  
@@ -65,8 +78,11 @@ This test suite was developed using the following tools and methodologies:
      npx cypress run
 
  - **Run tests by tag -> To run specific test filtered by tag. The tags were added to each feature file in this project**  
-    npx cypress run --env TAGS='@desiredTage'
+    npx cypress run --env TAGS='@desiredTag'
 
-  - **Run tests in headless mode, generate JSON report with screenshots, then generate an HTML report from the JSON file   for easy viewing in the browser - All reports,jsons & screenshots will be ignored in the commits**  
+ - **Run tests in headless mode, generate JSON report with screenshots, then generate an HTML report from the JSON file for easy viewing in the browser** 
     npx cypress run:report
     npm run report:html
+![alt text](ReportExample.jpeg)
+
+ - **Note: All reports,jsons & screenshots will be ignored in the commits**  
