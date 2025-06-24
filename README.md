@@ -64,6 +64,10 @@ This test suite was developed using the following tools and methodologies:
 
 ## Running the Tests
 
+ - **Prerequisites**
+   Make sure you have [Node.js](https://nodejs.org/) installed (version 14 or higher recommended).
+   This project uses Cypress for end-to-end testing, which will be installed automatically as a dev dependency.
+
   - **Base URL**  
     The tests are configured to run against the base URL:  `https://www.sapfioneer.com/`  
     This is set in the Cypress config, so all test URLs are relative to this address.
