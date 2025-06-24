@@ -7,13 +7,13 @@ This project contains automated tests developed to fulfill the requirements of t
 ## Test Cases Overview
 
 - **Test 1**  
-  Navigate to the page _SAP Fioneer | World-class software solutions for financial services_ and verify the presence and correctness of the **Key Facts** section.
+  Navigate to the SAP Fioneer homepage (SAP Fioneer | World-class software solutions for financial services) and verify the Key Facts section is present and accurate
 
 - **Test 2**  
-  On the same page, under the **Finance & ESG** menu, click on **ESG KPI Engine**.  
-  Verify that the user is redirected to the correct page:  
-  _Stay audit-ready with the ESG KPI Engine | SAP Fioneer_  
-  (This page contains relevant information about the project).
+  From the homepage, under the Finance & ESG menu, click on ESG KPI Engine.
+  Verify redirection to the correct page:
+  Stay audit-ready with the ESG KPI Engine | SAP Fioneer, which contains relevant project information.
+
 
 - **Test 3**  
   From the same main page, click on the **Get in touch** button.  
@@ -51,9 +51,6 @@ This test suite was developed using the following tools and methodologies:
 - **`support/`**  
   Includes custom commands, configuration, and setup scripts such as global hooks.
 
-- **`intercept/`**  
-  Contains Cypress network intercepts used to monitor or mock API requests, ensuring test stability and reducing flakiness.
-
 ---
 
 ## Running the Tests
@@ -64,3 +61,5 @@ This test suite was developed using the following tools and methodologies:
     npx cypress open
  - **Run via headless mode -> Runs tests in the terminal without opening a browser; results and logs are shown in the console**  
     npx cypress run
+ - **Run tests by tag -> To run specific test filtered by tag. The tags were added to each feature file in this project**  
+    npx cypress run --env TAGS='@desiredTage'

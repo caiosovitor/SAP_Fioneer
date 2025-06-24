@@ -1,0 +1,12 @@
+{
+    "invalidFormatEmail":"342323",
+    "notAcceptedDomainEmail":"jondoe@gmail.com",
+    "validEmail": "johndoe@sapfioneer.com",
+    "name": "John",
+    "lastName": "Doe",
+    "phoneNumber": "123456789",
+    "jobTitle": "engineering" ,
+    "company": "Sap Fioneer",
+    "country": "Germany"
+}
+
