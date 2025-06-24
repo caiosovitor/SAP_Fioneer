@@ -57,9 +57,16 @@ This test suite was developed using the following tools and methodologies:
 
 - **Install dependencies**  
     npm install
+
  - **Run via browser mode -> * Opens Cypress Test Runner UI where you can select the browser and run the desired tests interactively**  
     npx cypress open
+
  - **Run via headless mode -> Runs tests in the terminal without opening a browser; results and logs are shown in the console**  
-    npx cypress run
+     npx cypress run
+
  - **Run tests by tag -> To run specific test filtered by tag. The tags were added to each feature file in this project**  
     npx cypress run --env TAGS='@desiredTage'
+
+  - **Run tests in headless mode, generate JSON report with screenshots, then generate an HTML report from the JSON file   for easy viewing in the browser - All reports,jsons & screenshots will be ignored in the commits**  
+    npx cypress run:report
+    npm run report:html
