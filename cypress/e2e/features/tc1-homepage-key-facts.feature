@@ -1,19 +1,20 @@
+# This tag helps to easily pick and run this feature when needed (headless or browser)
+@TC1
 Feature: Key Facts validation on SAP Fioneer homepage
 
-    This feature focuses on validating the key UI elements and informational blocks
+    This feature focuses on validating the key UI elements and informational blocks related the Test Case 1 of the challenge
     present on the main page of SAP Fioneer. It includes verification of:
-    - Header navigation and CTA buttons
-    - Key fact blocks below the main banner
-    - Logos of financial institutions
-    - E2E solutions section
-    - Customer success stories
-    - News & Insights tiles
-    - Footer social links and grouped links
+        - Header navigation block
+        - Steppers block
+        - Logos of financial institutions
+        - E2E solutions section (cards block)
+        - Customer success stories
+        - News & Insights tiles
+        - Footer social links and grouped links
 
-
+    #Background is used when a step is used by all the test scenarios.
     Background:
         Given User accesses the main page of SAP Fioneer main page and accepts cookies
-
 
 
     Scenario: 1 - Veryfing Key Sections available on header of page
@@ -25,8 +26,8 @@ Feature: Key Facts validation on SAP Fioneer homepage
             | Resource  |
             | Company   |
 
+ 
 
-    #below "Innovate with a trusted partner on your side" subtitle
     Scenario: 2 - Veryfing Key Sections available on stepper blocks
         Then the following feature blocks should be visible:
             | heading                    | description                                                                                                                |
@@ -35,6 +36,7 @@ Feature: Key Facts validation on SAP Fioneer homepage
             | From vendor to partner     | Don’t settle for off-the-shelf products. We listen to your specific needs, collaborate closely and invest in your success. |
             | A safe pair of hands       | We have decades of experience of successful digital transformation, never compromising reliability and scalability.        |
             | At your side at every step | We are a global player with teams on the ground to offer a seamless journey wherever you operate.                          |
+
 
 
     Scenario: 3 - Veryfing Financial Services Institutes logo
@@ -49,6 +51,8 @@ Feature: Key Facts validation on SAP Fioneer homepage
             | SHB                  |
             | ATB                  |
 
+
+
     Scenario: 4 - Veryfing solutions available on cards blocks area
         And the following E2E solutionsr financial services should be visible
             | solutions   |
@@ -56,7 +60,8 @@ Feature: Key Facts validation on SAP Fioneer homepage
             | Insurance   |
             | Finance ESG |
 
-    ##Veryfing only customers success stories available on main page, without click in "More customer stories"
+
+
     Scenario: 5 - Veryfing customers success stories on case studies block
         And the following customers success stories should be visible
             | customers storiers   |
@@ -67,7 +72,8 @@ Feature: Key Facts validation on SAP Fioneer homepage
             | Ergo                 |
             | Banco Atlantida      |
 
-    #Veryfing Key Sections available on News and Insights on tiles block
+
+
     Scenario: 6 - Veryfing News and Insights on tiles block
         And the following news & insights block should be visible
             | topic                             | description                                                                                                                | details     |
@@ -76,6 +82,7 @@ Feature: Key Facts validation on SAP Fioneer homepage
             | The modernization dividend        | Modernizing core insurance systems represents far more than a technical upgrade; it’s a strategic investment.              | Read more   |
             | The new role of bank CFOs         | The role of the CFO is undergoing a profound transformation that Artificial Intelligence is helping to shape.              | Read more   |
             | Get the latest insights           | Sign up for our newsletter and get the latest business insights and thought leadership delivered straight to your inbox.   | Sign up now |
+
 
 
     Scenario: 7- Veryfing Sections available on Footer of the page
