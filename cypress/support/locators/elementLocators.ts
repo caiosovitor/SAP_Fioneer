@@ -38,7 +38,7 @@ export interface Locators {
     buttonOption: string;
   };
   FOOTER_OPTIONS: {
-    socialMedia: string;
+    socialMedia: (nameLower: string) => string;
     importantLinks: string;
   };
   ESG_KPI_PAGE: {
@@ -85,7 +85,7 @@ export const locators: Locators = {
     buttonOption: '.tiles-block  .btn'
   },
   FOOTER_OPTIONS: {
-    socialMedia: '.footer .col-lg-4 .list-reset',
+    socialMedia: (social: string) => `.footer [aria-label="Follow us ${social}"]`,
     importantLinks: '.footer .container-fluid .col-sm-3'
   },
   ESG_KPI_PAGE: {
